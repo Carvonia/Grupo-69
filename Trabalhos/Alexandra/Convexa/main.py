@@ -2,6 +2,8 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
+
+# Função para exibir uma imagem com o título especificado
 def exibir_imagem(imagem, titulo):
     plt.imshow(cv2.cvtColor(imagem, cv2.COLOR_BGR2RGB))
     plt.title(titulo)
@@ -10,7 +12,7 @@ def exibir_imagem(imagem, titulo):
 
 
 # Leitura da imagem de entrada
-src = cv2.imread("D:\Programming\Grupo69\Trabalhos\Alexandra\Convexa\sample.jpg", 1)
+src = cv2.imread("Trabalhos\Alexandra\Convexa\sample.jpg", 1)
 if src is None:
     raise FileNotFoundError("The image file 'sample.jpg' was not found.")
 exibir_imagem(src, 'Imagem Original')
