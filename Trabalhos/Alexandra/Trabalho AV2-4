@@ -1,0 +1,20 @@
+def CalcularTroco(valor, moedas):
+    troco = {}
+    for moeda in moedas:
+        if valor == 0:
+            break
+        quantidade = valor // moeda
+        if quantidade > 0:
+            troco[moeda] = quantidade
+            valor -= quantidade * moeda
+    return troco
+
+# Lista do Sistema Monetário
+moedas = [100, 50, 25, 10, 5, 1]
+
+# Valores Teste
+valores = [78, 107, 784, 2333]
+
+# Retorna o troco para cada valor de teste
+for valor in valores:
+    print(f"Troco para {valor} = {CalcularTroco(valor, moedas)}")
